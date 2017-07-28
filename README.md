@@ -1,5 +1,9 @@
-## Project info
+## World Population Project info
+Running the project locally:
 
+1. Please run a node version > || === v6.9.5
+2. `sudo npm install` all dependencies
+3. `npm start
 
 
 ## Auto Generated Info:
