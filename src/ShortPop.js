@@ -14,6 +14,7 @@ class ShortPop extends React.Component{
 		}
 		this.state = this.defaultValues;
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.hanldeClick = this.hanldeClick.bind(this);
 	}
 
 	/* Toggle the visibility of both buttons */
@@ -22,7 +23,9 @@ class ShortPop extends React.Component{
 			return { countVisible: !this.state.rankingVisible }
 		})
 	}
-
+	hanldeClick(e){
+		console.log('clicked!');
+	}
 	handleSubmit(e) {
 
 		e.preventDefault();
@@ -87,7 +90,7 @@ class ShortPop extends React.Component{
 		const shortcountries = this.state.shortestArr.map((object, index) => <ShortCountry key={index} name={object.name}/> );
 
 		return(
-			<div className="row">
+			<div className="row" onClick={this.hanldeClick}>
 				<div className="jumbotron">
 					<h3 className="text-center">Shortest Country Names</h3>
 					<p className="text-center">Populations of countries with shortest names</p>
